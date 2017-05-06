@@ -14,16 +14,16 @@ var reduce = function(key, values) {
         avgHeight = 0,
         avgWeight = 0;
     
-    for (var i = 1; i < values.length; i++) {
+    for (var i = 0; i < values.length; i++) {
         heightSum += values[i].height;
         weightSum += values[i].weight;
     }
     
-    avgHeight = heightSum / values.length - 1;
-    avgWeight = weightSum / values.length - 1;
+    avgHeight = heightSum / values.length;
+    avgWeight = weightSum / values.length;
     
     
-    return { avg_height: avgHeight, avg_weight: avgWeight };
+    return { height: avgHeight, weight: avgWeight };
 };
 
 db.people.mapReduce(map, reduce, { out: 'people_avg_width_height' });

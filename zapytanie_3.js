@@ -1,3 +1,3 @@
 // Lista mężczyzn narodowości niemieckiej;
 
-db.people.find({ nationality: "Germany", sex: "Male" }).pretty();
+db.people.find({ nationality: "Germany", sex: "Male" })

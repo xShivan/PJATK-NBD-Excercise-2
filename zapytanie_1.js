@@ -1,3 +1,3 @@
 // Jedna osoba znajdująca się w bazie;
 
-db.people.find().limit(1);
+db.people.find().limit(1)
